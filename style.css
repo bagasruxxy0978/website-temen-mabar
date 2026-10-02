@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffeaf2,
+            #fff5f8,
+            #fcecff
+        );
+
+    color: #66505b;
+
+    overflow: hidden;
+}
+
+
+/* BUNGA */
+
+.flowers span {
+    position: fixed;
+
+    font-size: 28px;
+
+    opacity: 0.7;
+
+    animation:
+        floating 5s ease-in-out infinite;
+
+    z-index: 0;
+}
+
+.flowers span:nth-child(1) {
+    left: 5%;
+    top: 12%;
+}
+
+.flowers span:nth-child(2) {
+    left: 18%;
+    top: 75%;
+}
+
+.flowers span:nth-child(3) {
+    left: 35%;
+    top: 8%;
+}
+
+.flowers span:nth-child(4) {
+    right: 10%;
+    top: 20%;
+}
+
+.flowers span:nth-child(5) {
+    right: 20%;
+    bottom: 10%;
+}
+
+.flowers span:nth-child(6) {
+    right: 5%;
+    top: 65%;
+}
+
+.flowers span:nth-child(7) {
+    left: 45%;
+    bottom: 5%;
+}
+
+.flowers span:nth-child(8) {
+    left: 8%;
+    top: 45%;
+}
+
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+/* HALAMAN */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+.page.active {
+
+    display: flex;
+
+    animation:
+        pageIn 0.7s ease;
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.95)
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* BOX */
+
+.cute-box,
+.letter,
+.final-letter {
+
+    width: min(600px, 94%);
+
+    padding: 42px 30px;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255,255,255,0.78);
+
+    border:
+        2px solid
+        rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 20px 60px
+        rgba(207, 145, 174, 0.25);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+/* BONEKA */
+
+.teddy {
+
+    font-size: 75px;
+
+    animation:
+        teddyBounce 2.5s
+        ease-in-out infinite;
+}
+
+.big-teddy {
+
+    font-size: 95px;
+
+    animation:
+        teddyBounce 2.5s
+        ease-in-out infinite;
+}
+
+.teddy-small {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+@keyframes teddyBounce {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(3deg);
+    }
+}
+
+
+/* TEXT */
+
+.small-title {
+
+    margin-top: 15px;
+
+    color: #c48ba5;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+h1 {
+
+    margin: 12px 0 20px;
+
+    font-size:
+        clamp(42px, 8vw, 65px);
+
+    line-height: 1;
+
+    color: #b96f91;
+}
+
+h2 {
+
+    font-size:
+        clamp(30px, 6vw, 45px);
+
+    margin:
+        12px 0 25px;
+
+    color: #b96f91;
+}
+
+.intro {
+
+    max-width: 440px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    color: #8b707b;
+}
+
+
+/* FLOWER TITLE */
+
+.flower-title {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #c783a0;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* PARAGRAPH */
+
+.letter p,
+.final-letter p {
+
+    line-height: 1.85;
+
+    margin-bottom: 17px;
+
+    color: #806974;
+
+    font-size: 16px;
+}
+
+.cute-text {
+
+    color: #bd7293 !important;
+
+    font-weight: bold;
+}
+
+
+/* QUOTE */
+
+.quote {
+
+    margin:
+
+        25px 0;
+
+    padding:
+
+        20px;
+
+    border-radius: 20px;
+
+    background:
+        #fff0f6;
+
+    color: #bd7693;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+
+/* BUTTON */
+
+button {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding:
+        14px 28px;
+
+    margin-top: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e99db9,
+            #d98cab
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(213, 135, 164, 0.3);
+
+    transition:
+        0.3s;
+}
+
+button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 12px 25px
+        rgba(213, 135, 164, 0.4);
+}
+
+
+/* GAME */
+
+.game {
+
+    font-size: 60px;
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+
+/* FINAL */
+
+.final-letter {
+
+    max-width: 650px;
+}
+
+.flowers-final {
+
+    font-size: 25px;
+
+    margin:
+        10px 0 20px;
+}
+
+.final-message {
+
+    margin-top: 25px;
+
+    padding: 22px;
+
+    border-radius: 22px;
+
+    background:
+        #fff2f7;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    line-height: 1.7;
+}
+
+.final-message strong {
+
+    color: #b9688d;
+
+    font-size: 20px;
+}
+
+.gg {
+
+    margin-top: 25px;
+
+    color: #c17999;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .cute-box,
+    .letter,
+    .final-letter {
+
+        padding:
+            32px 20px;
+
+    }
+
+    .teddy {
+
+        font-size: 60px;
+    }
+
+    .big-teddy {
+
+        font-size: 75px;
+    }
+
+    .letter p,
+    .final-letter p {
+
+        font-size: 15px;
+
+    }
+
+    .flowers span {
+
+        font-size: 22px;
+
+    }
+}
